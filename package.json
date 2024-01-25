@@ -20,7 +20,7 @@
     "framer-motion": "^11.0.2",
     "leva": "0.9.1",
     "maath": "^0.10.7",
-    "quick-3d-views": "^1.0.0",
+    "quick-3d-views": "^1.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "simplex-noise": "^4.0.1",
