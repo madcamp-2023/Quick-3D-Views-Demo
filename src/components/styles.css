@@ -1,0 +1,165 @@
+@import url('https://rsms.me/inter/inter.css');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iI0U4QjA1OSIvPjwvc3ZnPg=='),
+    auto;
+}
+
+main {
+  background: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+}
+
+/*----------------------ocean 배경 테스트용 임시 코드-------------------------------*/
+.app-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 중앙 정렬 */
+  justify-content: center; /* 세로 중앙 정렬 */
+  width: 100%;
+  height: 100%;
+}
+
+.ocean-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1; /* 배경으로 설정 */
+}
+
+/*---------------------------------------------------------------------*/
+.project-text {
+  position: absolute;
+  top: 30px; /* 상단으로부터의 거리 */
+  left: 50%; /* 가로 중앙 정렬 */
+  transform: translateX(-50%); /* 정확한 중앙 정렬을 위해 */
+  font-family: 'Inter', sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: #E8B059;
+  white-space: pre;
+}
+.experiences-text {
+  position: absolute;
+  top: 30px; /* 상단으로부터의 거리 */
+  left: 50%; /* 가로 중앙 정렬 */
+  transform: translateX(-50%); /* 정확한 중앙 정렬을 위해 */
+  font-family: 'Inter', sans-serif;
+  font-size: 80px;
+  font-weight: bold;
+  color: #00264B;
+  white-space: pre;
+}
+
+.scroll-container {
+  overflow-y: auto;
+  height: 100vh; /* 또는 원하는 높이 */
+}
+
+.fullcomponent {
+  z-index: 2;
+  display: flex;
+  flex: none; /* 고정 크기를 유지 */
+  align-self: center; /* 세로 중앙 정렬 */
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative; /* 추가된 스타일 */
+  height: 80%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  transition: transform 0.5s ease; /* 부드러운 전환 효과 */
+}
+
+.canvas {
+  order: 2;
+  flex: 1;
+  height: 100%;
+  
+}
+
+.overlay {
+  position: relative;
+  order: 1;
+  flex: 1;
+  pointer-events: none;
+  
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-aspect-ratio: 8/7) {
+  main {
+    flex-direction: column;
+  }
+  .fullcomponent {
+    flex-direction: column;
+    display: flex;
+    flex: 2; /* 추가된 스타일 */
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .project-text {
+    position: absolute;
+    top: 30px; /* 상단으로부터의 거리 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%); /* 정확한 중앙 정렬을 위해 */
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #E8B059;
+    white-space: pre;
+  }
+  .experiences-text {
+    position: absolute;
+    top: 300px; /* 상단으로부터의 거리 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%); /* 정확한 중앙 정렬을 위해 */
+    font-family: 'Inter', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #E8B059;
+    white-space: pre;
+  }
+
+  .canvas {
+    order: 1;
+  }
+  svg {
+    order: 2;
+    width: 100%;
+    max-width: 100%;
+    height: 50vh;
+  }
+}

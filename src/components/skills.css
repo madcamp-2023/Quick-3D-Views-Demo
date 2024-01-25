@@ -1,0 +1,33 @@
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.skills-row {
+  display: flex;
+  justify-content: center;
+  gap: 2vw; /* 화면 너비에 따라 간격 조정 */
+  margin-bottom: 2vw; /* 화면 너비에 따라 줄 간 간격 조정 */
+}
+
+.skill-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vw;
+}
+
+.skill-item img {
+  width: 5vw; /* 화면 너비에 따라 이미지 크기 조정 */
+  height: auto; /* 이미지 비율 유지 */
+}
+
+.skill-item img:hover {
+  transform: scale(1.1); /* 마우스 오버 시 약간 확대 */
+}
